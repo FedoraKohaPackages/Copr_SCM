@@ -1,0 +1,3 @@
+directory=${PWD##*/}  
+srpm=$(ls *.src.rpm)
+copr-cli build KOHAExtra http://raw.githubusercontent.com/FedoraKohaPackages/Copr_SCM/master/$directory/$srpm --nowait

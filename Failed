@@ -1,3 +1,10 @@
+perl-Config-Onion
+	EPEL7: perl-Moo
+		Module::Runtime
+		Role::Tiny
+		Sub::Defer
+		Sub::Quote
+		strictures
 perl-Catmandu
 	requires
 		CGI::Expand

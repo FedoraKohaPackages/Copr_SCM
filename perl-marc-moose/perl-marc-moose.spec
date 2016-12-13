@@ -1,6 +1,6 @@
 Name:           perl-marc-moose
-Version:        1.0.31
-Release:        2%{?dist}
+Version:        1.0.33
+Release:        1%{?dist}
 Summary:        marc::moose Perl module
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -101,6 +101,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %changelog
+* Tue Dec 13 2016 Nicholas van Oudtshoorn <vanoudt@gmail.com> 1.0.33-1
+- New upstream release
 * Thu May 26 2016 Nicholas van Oudtshoorn <vanoudt@gmail.com> 1.0.31-1
 - Update BuildRequires
 * Thu May 26 2016 Nicholas van Oudtshoorn <vanoudt@gmail.com> 1.0.31-1
