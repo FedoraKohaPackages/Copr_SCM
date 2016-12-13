@@ -1,4 +1,6 @@
-directory=$(pwd)
+directory=${PWD##*/}  
+rm *.src.rpm
+git rm *.src.rpm
 mkdir BUILD
 cd BUILD
 mkdir SOURCES
