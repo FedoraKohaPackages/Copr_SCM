@@ -1,0 +1,14 @@
+perl-Catmandu
+	requires
+		CGI::Expand
+		Config::Onion
+		Log::Any::Adapter::Log4perl
+		MooX::Aliases
+		MooX::Role::Logger
+		Parser::MGC *
+		Text::Hogan::Compiler ?
+		Try::Tiny::ByClass
+		URI::Template
+perl-Catmandu-MARC
+	requires perl-Catmandu
+
