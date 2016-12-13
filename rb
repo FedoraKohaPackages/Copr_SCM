@@ -1,5 +1,4 @@
 directory=${PWD##*/}  
-copr-cli delete-package --name $directory KOHAExtra
 rm *.src.rpm
 git rm *.src.rpm
 mkdir BUILD
@@ -15,4 +14,4 @@ srpm=$(ls *.src.rpm)
 git add *.rpm
 git commit -m "New SRPM for $srpm"
 git push
-copr-cli build KOHAExtra https://raw.githubusercontent.com/FedoraKohaPackages/Copr_SCM/master/$directory/$srpm --nowait
+copr-cli build KOHAExtra http://raw.githubusercontent.com/FedoraKohaPackages/Copr_SCM/master/$directory/$srpm --nowait
