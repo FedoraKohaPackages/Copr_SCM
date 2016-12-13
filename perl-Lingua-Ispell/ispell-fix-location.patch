@@ -1,0 +1,69 @@
+diff -ur Lingua-Ispell-0.07/lib/Lingua/Ispell.pm Lingua-Ispell-0.07-fixed/lib/Lingua/Ispell.pm
+--- Lingua-Ispell-0.07/lib/Lingua/Ispell.pm	2000-04-19 02:24:23.000000000 +0800
++++ Lingua-Ispell-0.07-fixed/lib/Lingua/Ispell.pm	2015-09-29 11:57:19.816693897 +0800
+@@ -173,7 +173,7 @@
+ 
+ The full location of the ispell executable is stored
+ in the variable C<$Lingua::Ispell::path>.  The default
+-value is F</usr/local/bin/ispell>.
++value is F</usr/bin/ispell>.
+ If your ispell executable has some name other than
+ this, then you must set C<$Lingua::Ispell::path> accordingly
+ before you call C<Lingua::Ispell::spellcheck()> (or any other function
+@@ -197,7 +197,7 @@
+       }
+     }
+ 
+-    $Lingua::Ispell::path ||= '/usr/local/bin/ispell';
++    $Lingua::Ispell::path ||= '/usr/bin/ispell';
+ 
+     $Lingua::Ispell::pid = undef; # so that it's still undef if open2 fails.
+     $Lingua::Ispell::pid = open2( # if open2 fails, it throws, but doesn't return.
+@@ -499,7 +499,7 @@
+ names, and are searched for according to the
+ following rule: if the name does not contain a slash,
+ it is looked for in the directory containing the
+-default dictionary, typically /usr/local/lib.
++default dictionary, typically /usr/lib.
+ Otherwise, it is used as is: if it does not begin
+ with a slash, it is construed from the current
+ directory.
+diff -ur Lingua-Ispell-0.07/README Lingua-Ispell-0.07-fixed/README
+--- Lingua-Ispell-0.07/README	2000-04-19 02:46:16.000000000 +0800
++++ Lingua-Ispell-0.07-fixed/README	2015-09-29 12:16:34.756556023 +0800
+@@ -161,7 +161,7 @@
+ 
+      The full location of the ispell executable is stored in the
+      variable $Lingua::Ispell::path.  The default value is
+-     /usr/local/bin/ispell.  If your ispell executable has some
++     /usr/bin/ispell.  If your ispell executable has some
+      name other than this, then you must set
+      $Lingua::Ispell::path accordingly before you call
+      Lingua::Ispell::spellcheck() (or any other function in the
+@@ -263,7 +263,7 @@
+      Dictionary names are actually file names, and are searched
+      for according to the following rule: if the name does not
+      contain a slash, it is looked for in the directory
+-     containing the default dictionary, typically /usr/local/lib.
++     containing the default dictionary, typically /usr/lib.
+      Otherwise, it is used as is: if it does not begin with a
+      slash, it is construed from the current directory.
+ 
+diff -ur Lingua-Ispell-0.07/spellcheck Lingua-Ispell-0.07-fixed/spellcheck
+--- Lingua-Ispell-0.07/spellcheck	2000-04-19 02:05:55.000000000 +0800
++++ Lingua-Ispell-0.07-fixed/spellcheck	2015-09-29 11:57:43.846671293 +0800
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/perl -w
+ 
+ $| = 1;
+ 
+diff -ur Lingua-Ispell-0.07/test.pl Lingua-Ispell-0.07-fixed/test.pl
+--- Lingua-Ispell-0.07/test.pl	1999-10-22 22:54:58.000000000 +0800
++++ Lingua-Ispell-0.07-fixed/test.pl	2015-09-29 11:57:36.070678607 +0800
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/perl -w
+ # Before `make install' is performed this script should be runnable with
+ # `make test'. After `make install' it should work as `perl test.pl'
+ 

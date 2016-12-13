@@ -1,0 +1,12 @@
+diff -u3 Catmandu-MARC-0.09b/Makefile.PL Catmandu-MARC-0.09a/Makefile.PL
+--- Catmandu-MARC-0.09b/Makefile.PL	2013-10-31 21:03:07.000000000 +0800
++++ Catmandu-MARC-0.09a/Makefile.PL	2016-06-30 15:13:46.818158415 +0800
+@@ -13,7 +13,7 @@
+                    'Test::Exception' => 0,
+                    'MARC::File::XML' => '0.93',
+                    'Moo' => '1.0',
+-                   'MARC::Record' => '2.000003',
++                   'MARC::Record' => '2.0.6',
+                    'Catmandu' => '0.08'
+                  }
+ )
