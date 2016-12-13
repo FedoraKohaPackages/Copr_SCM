@@ -1,6 +1,6 @@
 Name:           perl-UUID
 Version:        0.27
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        DCE compatible Universally Unique Identifier library for Perl
 License:        Artistic 2.0
 Group:          Development/Libraries
@@ -12,6 +12,7 @@ BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Devel::CheckLib)
 BuildRequires:	libuuid-devel
 BuildRequires:  perl(Test)
+BuildRequires:  perl(Test::More)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
@@ -52,6 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 
 %changelog
+* Tue Dec 13 2016 Nicholas van Oudtshoorn <vanoudt@gmail.com> 0.27-2
+- Fix BR
 * Tue Dec 13 2016 Nicholas van Oudtshoorn <vanoudt@gmail.com> 0.27-1
 - New upstream release
 * Tue Sep 29 2015 Nicholas van Oudtshoorn <vanoudt@gmail.com> 0.24-1
