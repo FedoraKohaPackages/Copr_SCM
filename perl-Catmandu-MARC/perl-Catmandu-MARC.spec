@@ -1,5 +1,5 @@
 Name:           perl-Catmandu-MARC
-Version:        1.03
+Version:        0.105
 Release:        1%{?dist}
 Summary:        Catmandu::MARC Perl module
 License:        GPL+ or Artistic
@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 
 %changelog
-* Tue Dec 13 2016 Nicholas van Oudtshoorn <vanoudt@gmail.com> 1.03-1
+* Tue Dec 13 2016 Nicholas van Oudtshoorn <vanoudt@gmail.com> 0.105-1
 - New upstream release
 * Thu Jun 30 2016 Nicholas van Oudtshoorn <vanoudt@gmail.com> 0.09-2
 - MARC::Record showing weird version name
